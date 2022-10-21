@@ -1,3 +1,4 @@
+using Authentication.Api.Infrastructure.Attributes;
 using Authentication.BusinessLayer.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -28,15 +29,9 @@ public class AuthController : ControllerBase
     }
 
     [HttpGet("Check-token")]
+    [AuthorizeJWT]
     public IActionResult CheckToken()
     {
-        var user = HttpContext.Items["User"];
-        
-        if (user is null)
-        {
-            return Unauthorized("Token is bad");
-        }
-
         return Ok("Token is alive");
     }
 }

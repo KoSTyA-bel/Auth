@@ -8,7 +8,7 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddAppSettings();
-builder.AddJWTWorkerrSettings();
+builder.AddJWTWorkerSettings();
 
 builder.Services.AddAuthService();
 builder.Services.AddUserService();

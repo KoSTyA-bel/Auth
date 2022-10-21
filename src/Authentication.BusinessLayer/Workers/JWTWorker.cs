@@ -5,17 +5,27 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace Authentication.BusinessLayer.Generators;
+namespace Authentication.BusinessLayer.Worker;
 
+/// <summary>
+/// Provides methods for verifying and generating jwt.
+/// </summary>
+/// <seealso cref="Authentication.BusinessLayer.Interfaces.IJWTWorker" />
 public class JWTWorker : IJWTWorker
 {
     private readonly JWTWorkerSettings _settings;
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="JWTWorker"/> class.
+    /// </summary>
+    /// <param name="settings">The settings.</param>
+    /// <exception cref="System.ArgumentNullException">If <paramref name="settings"/> is null.</exception>
     public JWTWorker(JWTWorkerSettings settings)
     {
         _settings = settings ?? throw new ArgumentNullException(nameof(settings));
     }
 
+    /// <inheritdoc/>
     public Task<string> GenerageToken(string userName, CancellationToken token)
     {
         var tokenHandler = new JwtSecurityTokenHandler();
@@ -34,6 +44,7 @@ public class JWTWorker : IJWTWorker
         return Task.FromResult(tokenHandler.WriteToken(generatedToken));
     }
 
+    /// <inheritdoc/>
     public Task<string> ValidateToken(string token, CancellationToken cancellationToken)
     {
         var tokenHandler = new JwtSecurityTokenHandler();
