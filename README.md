@@ -42,6 +42,8 @@ After building the project, run it. After a successful launch, you can send a re
 POST: http://your_url/api/Auth?userName=admin&password=admin
 ```
 
+Save JWT issued to you.
+
 Now you can verify JWT. To do this, you need to send a request. Insert the previously saved token into the request authorization header.
 
 ```
