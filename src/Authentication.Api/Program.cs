@@ -40,3 +40,9 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+
+namespace Authentication
+{
+    public partial class Program { }
+}

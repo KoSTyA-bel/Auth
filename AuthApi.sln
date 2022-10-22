@@ -9,6 +9,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authentication.Api", "src\A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authentication.BusinessLayer", "src\Authentication.BusinessLayer\Authentication.BusinessLayer.csproj", "{91ADA709-5924-4DB8-A93C-67ED2089E01A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E7C88446-FED7-407C-A31E-5329BD73D889}"
+	ProjectSection(SolutionItems) = preProject
+		src\Authentication.Api\appsettings.Development.json = src\Authentication.Api\appsettings.Development.json
+		src\Authentication.Api\appsettings.json = src\Authentication.Api\appsettings.json
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authentication.BusinessLogicTest", "tests\Authentication.BusinessLogicTest\Authentication.BusinessLogicTest.csproj", "{EEFCB7C3-D70F-4581-8250-728195A2DBC5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +31,10 @@ Global
 		{91ADA709-5924-4DB8-A93C-67ED2089E01A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91ADA709-5924-4DB8-A93C-67ED2089E01A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91ADA709-5924-4DB8-A93C-67ED2089E01A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEFCB7C3-D70F-4581-8250-728195A2DBC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEFCB7C3-D70F-4581-8250-728195A2DBC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEFCB7C3-D70F-4581-8250-728195A2DBC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEFCB7C3-D70F-4581-8250-728195A2DBC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +42,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{937CD935-AD36-4390-A53C-696947AE87CE} = {09465382-0ACE-407E-B2DA-F63F7DBBC242}
 		{91ADA709-5924-4DB8-A93C-67ED2089E01A} = {09465382-0ACE-407E-B2DA-F63F7DBBC242}
+		{EEFCB7C3-D70F-4581-8250-728195A2DBC5} = {E7C88446-FED7-407C-A31E-5329BD73D889}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9FC48E16-C884-40F6-957C-1DF7EDC0E009}
