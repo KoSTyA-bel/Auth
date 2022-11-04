@@ -29,7 +29,7 @@ public class AuthController : ControllerBase
     }
 
     [HttpGet("Check-token")]
-    [AuthorizeJWT]
+    [Authorize]
     public IActionResult CheckToken()
     {
         return Ok("Token is alive");
